@@ -17,7 +17,7 @@ buttonElement.addEventListener("click", async () => {
     const { value } = inputElement
     const response = await fetch(`${url}/search?q=${value}`, options)
     const json = await response.json()
-    const results = json.data.slice(0,5)
+    const results = json.data.slice(0,6)
     console.log(results)
 
    resultsElement.innerHTML =  results.map((result) => {
